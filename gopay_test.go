@@ -24,7 +24,7 @@ func TestVerifyAsymetric(t *testing.T) {
 
 	timeStamp := "2024-04-22T09:55:40+07:00"
 
-	stringToSign := "POST" + ":" + "/v1.0/debit/notify" + ":" + encryptedBodyLowerCase + ":" + timeStamp
+	stringToSign := "POST" + ":" + "/gopay/v1.0/debit/notify" + ":" + encryptedBodyLowerCase + ":" + timeStamp
 
 	signature, err := CreateAsymmetricSignature(stringToSign)
 	assert.NoError(t, err)
